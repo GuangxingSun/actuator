@@ -1,0 +1,32 @@
+management:
+#  server:
+#    port: 8181
+#    servlet:
+#      context-path: /manager
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+          - beans  #指定需要暴露的站点
+          - metrics
+          - health
+#监控 端点管理明
+#   autoconfig : 所有自动配置信息
+#   auditevents : 审计信息
+#   beans ： 所有Bean信息
+#   configprops ：所有配置属性
+#   dump ：线程状态信息
+#   env ：当前环境信息
+#   health ：应用健康状况
+#   info ： 当前应用信息
+#   metrics ： 应用的各项指标
+#   mapplings ：应用@RequestMappling映射信息
+#   sutdown ：关闭当前应用（默认关闭状态）
+#   trace ： 追踪信息（最新的http请求）
+spring:
+  redis:
+    host: localhost
+    password: 123456
